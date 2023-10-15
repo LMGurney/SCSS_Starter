@@ -1,0 +1,60 @@
+@import url('https://fonts.cdnfonts.com/css/hallowed-crawler');
+                
+//font families
+$primary_font:Arial, sans-serif;
+$secondary_font: Georgia, serif;
+$teriary_font:cursive;
+$specialFont: 'Hallowed Crawler', sans-serif;
+
+//font sizes
+$baseFontSize:18px;
+$headingFontSize:40px;
+$tinyFontSize:11px;
+
+/* Define Halloween-themed colors as variables */
+$primary-color: #eec3a6; /* Light Peach? */
+$secondary-color: #990000; /* Blood Red */
+$light-color:#f4b627;/* Gold */
+$dark-color: #000000; /* Black */
+
+//font colors
+$mainFontColor: $secondary-color;
+$ligthFontColor:$light-color;
+$darkFontColor: $dark-color;
+
+//spacing and placement
+$wideMargin:.5em;
+$narrowMarin:.25em;
+$widePadding:.5em;
+$narrowPadding:.25em;
+$noPadding:0;
+$noMargin:0;
+$marginNoTop:0 20px;
+$marginNoSide: 20px 0;
+$fullWidth:100%;
+$halfWidth:50%;
+$radius: 10px;
+
+//setting a mixin, 
+//allows it to be called later
+
+@mixin reset-list {
+ //add scss here
+
+}
+
+@mixin horizontal-list {
+  //add scss here
+
+}
+
+// nested formatting
+//simple BEM (block element model naming)
+@mixin navigation{
+ //add scss here
+
+  
+}
+     
+//rounded mixin go here
+

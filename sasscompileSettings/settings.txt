@@ -1,0 +1,10 @@
+http://bangorcourses.com/SCSS_Playing/Scss_index.html
+
+ "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath":"./styles",
+            "savePathReplacementPairs": null
+        }
+    ]
