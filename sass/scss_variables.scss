@@ -40,21 +40,44 @@ $radius: 10px;
 
 @mixin reset-list {
  //add scss here
+ margin:$noMargin;
+ padding:$noPadding;
+ list-style: none;
 
 }
 
 @mixin horizontal-list {
   //add scss here
+  @include reset-list;
+   li{
+    display: inline-block;
 
+    margin: {
+      left: 0;
+      right:2em;
+    }
+   }
 }
 
 // nested formatting
 //simple BEM (block element model naming)
 @mixin navigation{
  //add scss here
-
-  
+  @include horizontal-list;
+    a{
+        text-decoration: none;
+        color:$light-color;
+        
+        &:hover{
+          color: $dark-color;
+          background-color: $light-color;
+          font-weight: bolder;
+        }
+    }
 }
      
 //rounded mixin go here
+@mixin rounded{
+  border-radius: $radius;
 
+}
