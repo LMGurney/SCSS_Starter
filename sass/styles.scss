@@ -1,124 +1,149 @@
 @import 'scss_variables';
 
 html{ 
-
+  font-size: $baseFontSize;
 }
 
 /* Apply styles to HTML elements */
 body {
-  
+  background-color: $dark-color;
+  color: $light-color;
+  font-family:$primary-font;
+  margin: $noMargin;
+  padding: $noPadding;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*this is part of flex*/
 
 }
   
 header {
-  
-}
+    background-color: $light-color;
+    color:$dark-color;
+    text-align: center;
+    padding: $narrowPadding;
+    width:100%
+  }
 
 h1{
-  
+  font-size: $headingFontSize;
+  font-family: $teriary_font;
 }
 
 nav {
-  
+  @include navigation;
+  width: $fullWidth;
+  padding: $widePadding;
 }
-
-main {
+ 
+ main {
+  display:flex;
+  box-sizing: border-box;
+  width:calc($fullWidth*.9);
+  border: 10px outset $light-color;
+  margin: $wideMargin;
+  padding: $widePadding;
   
 }
   
   /* Add styles for other sections as needed */
 main section {
- 
+ box-sizing: border-box;
+ justify-content: space-around;
+ margin: $wideMargin;
+ padding: $narrowPadding;
+ float:left;
 }
 
-main section {    
+// main section {    
   
-}
+// }
 
-section {
+// section {
 
-}
+// }
 
-footer {
+// footer {
  
-}
+// }
 
-/* Define styles for the RSVP button */
-.rsvp-button {
+// /* Define styles for the RSVP button */
+// .rsvp-button {
  
   
-}
+// }
 
-//darken is part of sassscript
-// https://sass-lang.com/documentation/modules/color/
-.rsvp-button:hover {
-  background-color: darken($secondary-color, 10%);
-}
+// //darken is part of sassscript
+// // https://sass-lang.com/documentation/modules/color/
+// .rsvp-button:hover {
+//   background-color: darken($secondary-color, 10%);
+// }
 
- ///////////////// Media Query ///////////////////////
+//  ///////////////// Media Query ///////////////////////
  
-//$widebreakpoint: 1000px;
-//$breakpoint:800px;
+// //$widebreakpoint: 1000px;
+// //$breakpoint:800px;
 
- /* Responsive styles for smaller screens */
-@media (max-width: $widebreakpoint) {
+//  /* Responsive styles for smaller screens */
+// @media (max-width: $widebreakpoint) {
  
-}
+// }
 
 
-@media (max-width: $breakpoint) {
-    main{
-      background-color: rgb(92, 4, 92);
-      flex-direction: column;
-    }
+// @media (max-width: $breakpoint) {
+//     main{
+//       background-color: rgb(92, 4, 92);
+//       flex-direction: column;
+//     }
 
-/* Styles for the menu toggle icon
-setting up hamburger menu */
-  .menu-toggle {
+// /* Styles for the menu toggle icon
+// setting up hamburger menu */
+//   .menu-toggle {
   
 
-      /* Define the styles for the three bars of the hamburger icon */
-      .bar {
+//       /* Define the styles for the three bars of the hamburger icon */
+//       .bar {
           
-      }
-  }
+//       }
+//   }
 
-  /* Styles for the mobile menu */
-  .mobile-menu {
+//   /* Styles for the mobile menu */
+//   .mobile-menu {
     
  
-}
+// }
 
-/* Media query to display 
-the hamburger menu when the 
-screen is smaller than 700px */
-@media (max-width: $breakpoint) {
-  .menu-toggle {
-      display: block; /* Show the menu toggle icon */
-  }
+// /* Media query to display 
+// the hamburger menu when the 
+// screen is smaller than 700px */
+// @media (max-width: $breakpoint) {
+//   .menu-toggle {
+//       display: block; /* Show the menu toggle icon */
+//   }
 
-  .mobile-menu {
-      //sassscript here
+//   .mobile-menu {
+//       //sassscript here
 
-      box-shadow: 0 4px 6px rgba(241, 137, 137, 0.1);
-      z-index: 2;
+//       box-shadow: 0 4px 6px rgba(241, 137, 137, 0.1);
+//       z-index: 2;
 
-      ul {
+//       ul {
           
-      }
-  }
-}
+//       }
+//   }
+// }
 
-/* Add the animation for the hamburger icon when the menu is open */
-.menu-toggle.active {
-    .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-  }
-}
+// /* Add the animation for the hamburger icon when the menu is open */
+// .menu-toggle.active {
+//     .bar:nth-child(1) {
+//         transform: rotate(-45deg) translate(-5px, 6px);
+//     }
+//     .bar:nth-child(2) {
+//         opacity: 0;
+//     }
+//     .bar:nth-child(3) {
+//         transform: rotate(45deg) translate(-5px, -6px);
+//     }
+//   }
+// } */

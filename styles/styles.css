@@ -1,0 +1,74 @@
+@import url("https://fonts.cdnfonts.com/css/hallowed-crawler");
+/* Define Halloween-themed colors as variables */
+/* Light Peach? */
+/* Blood Red */
+/* Gold */
+/* Black */
+html {
+  font-size: 18px;
+}
+
+/* Apply styles to HTML elements */
+body {
+  background-color: #000000;
+  color: #f4b627;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*this is part of flex*/
+}
+
+header {
+  background-color: #f4b627;
+  color: #000000;
+  text-align: center;
+  padding: 0.25em;
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: cursive;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  padding: 0.5em;
+}
+nav li {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 2em;
+}
+nav a {
+  text-decoration: none;
+  color: #f4b627;
+}
+nav a:hover {
+  color: #000000;
+  background-color: #f4b627;
+  font-weight: bolder;
+}
+
+main {
+  display: flex;
+  box-sizing: border-box;
+  width: 90%;
+  border: 10px outset #f4b627;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+/* Add styles for other sections as needed */
+main section {
+  box-sizing: border-box;
+  justify-content: space-around;
+  margin: 0.5em;
+  padding: 0.25em;
+  float: left;
+}/*# sourceMappingURL=styles.css.map */
