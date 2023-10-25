@@ -54,96 +54,171 @@ main section {
  margin: $wideMargin;
  padding: $narrowPadding;
  float:left;
+ width: calc($fullWidth*.30);
+
+    a{
+      color:$dark-color;
+      background-color: $light-color;
+    }
+    .tiny{
+      font-size: $tinyFontSize;
+    }
+    img{
+      width: 85%;
+    }
+
 }
 
-// main section {    
-  
-// }
 
-// section {
+ section {
+  margin: 20px;
 
-// }
+ }
 
-// footer {
- 
-// }
+ footer {
+  background-color: $secondary-color;
+  color: $light-color;
+  text-align: center;
+  padding: $narrowPadding;
+  width: $fullWidth;
+}
 
 // /* Define styles for the RSVP button */
-// .rsvp-button {
- 
-  
-// }
+.rsvp-button {
+  @include rounded;
+  font-family: $specialFont;
+  background-color: $secondary-color;
+  color: $light-color;
+  padding: 10px 20px;
+  border: 2px solid $light-color;
+  margin-left: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
 // //darken is part of sassscript
 // // https://sass-lang.com/documentation/modules/color/
-// .rsvp-button:hover {
-//   background-color: darken($secondary-color, 10%);
-// }
+.rsvp-button:hover {
+  background-color: darken($secondary-color, 10%);
+}
 
 //  ///////////////// Media Query ///////////////////////
  
-// //$widebreakpoint: 1000px;
-// //$breakpoint:800px;
+$widebreakpoint: 850px;
+$breakpoint:400px;
 
 //  /* Responsive styles for smaller screens */
-// @media (max-width: $widebreakpoint) {
- 
-// }
+@media (max-width: $widebreakpoint) {
+ main{
+  background-color: rgb(111,177,4);
+
+ }
+
+}
 
 
-// @media (max-width: $breakpoint) {
-//     main{
-//       background-color: rgb(92, 4, 92);
-//       flex-direction: column;
-//     }
+ @media (max-width: $breakpoint) {
+  main{
+   background-color: rgb(92, 4, 92);
+    flex-direction: column;
+    }
+
+    main section{
+        width:$fullWidth;
+        margin:$wideMargin;
+
+    }
+    .rsvp-button{
+      font-size: calc($tinyFontSize*1.5);
+    }
+
+  }
+
+
 
 // /* Styles for the menu toggle icon
 // setting up hamburger menu */
-//   .menu-toggle {
-  
+  .menu-toggle {
+    display:none;
+    cursor:pointer;
+    padding: 10px;
 
-//       /* Define the styles for the three bars of the hamburger icon */
-//       .bar {
-          
-//       }
-//   }
+      /* Define the styles for the three bars of the hamburger icon */
+      .bar {
+          width:30px;
+          height:3px;
+          background-color: #333;
+          margin: 6px 0;
+          transition: 0.4s;
+      }
+  }
 
-//   /* Styles for the mobile menu */
-//   .mobile-menu {
-    
+  /* Styles for the mobile menu */
+  .mobile-menu {
+   display: block; 
+   ul{
+      list-style: none;
+      padding: $noPadding;
+      margin: $noMargin;
+      text-align: center;
+      li{
+        margin: 15px 0;
+        a{
+          text-decoration: none;
+          color: $secondary-color;
+
+        }
+      }
+   }
  
-// }
+}
 
 // /* Media query to display 
 // the hamburger menu when the 
 // screen is smaller than 700px */
-// @media (max-width: $breakpoint) {
-//   .menu-toggle {
-//       display: block; /* Show the menu toggle icon */
-//   }
+@media (max-width: $breakpoint) {
+  .menu-toggle {
+      display: block; /* Show the menu toggle icon */
+  }
 
-//   .mobile-menu {
-//       //sassscript here
+  .mobile-menu {
+      //sassscript here
+      display: none;
+    background-color: $secondary-color;
+    top: 60px;
+    width: $fullWidth;
+    //text-align: center;
+      box-shadow: 0 4px 6px rgba(208, 198, 198, 0.1);
+      z-index: 2;
 
-//       box-shadow: 0 4px 6px rgba(241, 137, 137, 0.1);
-//       z-index: 2;
+      ul {
+          li{
+            margin: 2px 0px;
+            text-align: left;
+            a{
+              margin: 3px 0;
+              color:$dark-color;
+            
+              &:hover{
+                  background:white;
+                  color:$dark-color;
+            }
+          }
+        }
+      }
+  }
+}
 
-//       ul {
-          
-//       }
-//   }
-// }
-
-// /* Add the animation for the hamburger icon when the menu is open */
-// .menu-toggle.active {
-//     .bar:nth-child(1) {
-//         transform: rotate(-45deg) translate(-5px, 6px);
-//     }
-//     .bar:nth-child(2) {
-//         opacity: 0;
-//     }
-//     .bar:nth-child(3) {
-//         transform: rotate(45deg) translate(-5px, -6px);
-//     }
-//   }
-// } */
+//  Add the animation for the hamburger icon when the menu is open */
+.menu-toggle.active {
+    .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }

@@ -1,10 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/hallowed-crawler');
                 
 //font families
-$primary_font:fantasy;
-$secondary_font: "Times New Roman", serif;
-$teriary_font:monospace;
-$specialFont: Garamond, serif;
+$primary_font:Arial, sans-serif;
+$secondary_font: Georgia, serif;
+$teriary_font:cursive;
+$specialFont: 'Hallowed Crawler', sans-serif;
 
 //font sizes
 $baseFontSize:18px;
@@ -12,10 +12,10 @@ $headingFontSize:40px;
 $tinyFontSize:11px;
 
 /* Define Halloween-themed colors as variables */
-$primary-color: #306a97; /* Light Peach? */
-$secondary-color: #a98d8d; /* Blood Red */
-$light-color:#d3abcd;/* Gold */
-$dark-color: #126c26; /* Black */
+$primary-color: #eec3a6; /* Light Peach? */
+$secondary-color: #990000; /* Blood Red */
+$light-color:#f4b627;/* Gold */
+$dark-color: #000000; /* Black */
 
 //font colors
 $mainFontColor: $secondary-color;
